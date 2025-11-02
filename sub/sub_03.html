@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LISTERINE</title>
+    <link rel="stylesheet" href="../css/layout.css">
+    <link href="css/fixed-positioning.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="listerine_wrap">
+        <!-- 탑버튼 -->
+        <button id="top_btn">top</button>
+        <script>
+            $(document).ready(function () {
+
+                // Top 버튼 특정 스크롤높이에서만 보이기 / 숨기기
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 100) {
+                        $('#top_btn').fadeIn();
+                    } else {
+                        $('#top_btn').fadeOut();
+                    }
+                });
+
+                // Top 버튼 클릭시 페이지 상단으로 이동
+                $('#top_btn').click(function () {
+                    $('html, body').animate({ scrollTop: 0 }, 800);
+                    return false;
+                });
+            });
+        </script>
+        <!-- 네비바 -->
+        <section class="listerine_nav">
+            <ul>
+                <li><a href="../index.html"><img src="../images/sub_3/left_arrow.png" alt="">back home</a></li>
+                <li><a href="#">next project<img src="../images/sub_3/right_arrow.png" alt=""></a></li>
+            </ul>
+        </section>
+        <!-- 메인화면 -->
+        <section class="lt_main">
+            <img class="lt_logo" src="../images/sub_3/listerine_logo.png" alt="">
+            <div" class="overview">
+                <div class="top">
+                    <div class="x">
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <!-- 팝오버 -->
+                    <div class="popover">
+                        <button class="btn-open" popovertarget="popup3" popovertargetaction="toggle" style="cursor: pointer;">i</button>
+                        <div id="popup3" popover>
+                            <ul>
+                                <li>
+                                    <span>Duration</span><p>1.5 weeks</p>
+                                </li>
+                                <li>
+                                    <span>Tool</span><p>Figma, VSCode</p>
+                                </li>
+                                <li>
+                                    <span>Contribution</span><p>100%</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <a class="cont_wrap" href="https://sujin810-gif.github.io/listerine/" alt="" target="_blank">
+                    <div class="photo"></div>
+                    <div>
+                        <div class="letter">
+                            <div class="tit_wrap"><div class="tit">Overview</div></div>
+                            <p><span>리</span>스테린(Listerine)은 전 세계적으로 가장 널리 알려진 구강청결제 브랜드 중 하나로, 입 냄새 제거와 잇몸 건강 유지, 치석 및 플라크 감소 등 구강 건강 전반을 효과적으로 관리할 수 있는 다양한 제품을 제공합니다.<br><br>그러나 기존의 리스테린 한국 웹사이트는  브랜드의 명성에 비해 다소관리가 부족하다는 느낌을 받았습니다. 이런 부분을 보완하고자 리스테린이 지닌 글로벌 브랜드의 신뢰성과 에너지를 유지하면서도 한층 더 트렌디하고 깔끔한 인상을 줄 수 있는 방향으로 웹사이트 리디자인을 기획했습니다.</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="custom-cursor">VISIT SITE<img src="../images/sub_3/visit_arrow.png" alt=""></div>
+            <!-- 메인 커서 -->
+            <script>
+                const cursor = document.querySelector('.custom-cursor');
+                const contWrap = document.querySelector('.cont_wrap');
+
+                let mouseX = 0, mouseY = 0;
+                let posX = 0, posY = 0;
+
+                // 마우스 위치 추적
+                contWrap.addEventListener('mousemove', e => {
+                    mouseX = e.clientX;
+                    mouseY = e.clientY;
+                    cursor.style.opacity = 1; // 호버 시 보이도록
+                });
+
+                // 호버 종료 시 숨기기
+                contWrap.addEventListener('mouseleave', () => {
+                    cursor.style.opacity = 0;
+                });
+
+                // 부드럽게 따라다니게 하기
+                function animateCursor() {
+                    posX += (mouseX - posX) * 0.15; // 0.15는 속도, 낮추면 느려짐
+                    posY += (mouseY - posY) * 0.15;
+                    cursor.style.transform = `translate(${posX}px, ${posY}px) translate(-50%, -50%)`;
+                    requestAnimationFrame(animateCursor);
+                }
+
+                animateCursor();
+            </script>
+        </section>
+        <!-- 디자인가이드-컬러 -->
+        <section class="lt_color">
+            <div class="tit_wrap">
+                <div class="tit">Visual Identity Palette</div>
+            </div>
+            <div class="cont">제품에서 영감을 얻은 컬러를 주축으로 진한 흑색의 로고 컬러와 조화가 이루어지도록 디자인을 구성했습니다.<br>컬러 간의 대비와 균형을 통해 디자인의 완성도를 높이는 동시에, 시각적인 집중도를 강화하여 사용자가 브랜드 아이덴티티를 직관적으로 느낄 수 있도록 하였습니다.</div>
+            <div class="palette">
+                <ul>
+                    <li>
+                        <div class="letter_wrap">
+                            <p>#b36bd0</p>
+                            <span>hexadecimal code</span>
+                        </div>
+                        <div></div>
+                    </li>
+                    <li>
+                        <div class="letter_wrap">
+                            <p>#a2e0e2</p>
+                            <span>hexadecimal code</span>
+                        </div>
+                        <div></div>
+                    </li>
+                    <li>
+                        <div class="letter_wrap">
+                            <p>#169056</p>
+                            <span>hexadecimal code</span>
+                        </div>
+                        <div></div>
+                    </li>
+                    <li>
+                        <div class="letter_wrap">
+                            <p>#1c1c1c</p>
+                            <span>hexadecimal code</span>
+                        </div>
+                        <div></div>
+                    </li>
+                    <li>
+                        <div class="letter_wrap">
+                            <p>#ffffff</p>
+                            <span>hexadecimal code</span>
+                        </div>
+                        <div></div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- 디자인가이드-폰트 -->
+        <section class="lt_font">
+            <div class="left">
+                <div class="tit">font style</div>
+                <div class="box">
+                    <p class="semi_tit">Detail</p>
+                    <p><span>디</span>자인 전반에는 Pretendard 폰트를 적용하여 가독성과 일관성을 확보하고 브랜드의 신뢰성과 전문성을 강화하였습니다. 동시에 포인트 영역에는 Tenada 폰트를 사용하여 시각적 강조와 개성을 부여함으로써, 전체적인 디자인의 완성도를 높였습니다.</p>
+                </div>
+            </div>
+            <div class="right">
+                <div>
+                    <p class="semi_tit">Title</p>
+                    <ul>
+                        <li>Tenada 72px</li>
+                        <li>Pretendard SemiBold 32px</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="semi_tit">Body</p>
+                    <ul>
+                        <li>Pretendard Bold 32px</li>
+                        <li>Pretendard Medium 18px</li>
+                    </ul>
+                </div>
+                <div>Aa</div>
+            </div>
+        </section>
+        <!-- 디자인컨셉 -->
+        <section class="lt_concept">
+            <div class="letter">
+                <div>
+                    <div class="top_wrap">
+                        <div class="tit_wrap"><div class="tit">design concept</div></div>
+                        <p>기존 내비게이션 바에 길게 나열되어 있던 메뉴 구조를 간결하게 재정리하여 정보 접근성을 높이고, 전체적으로 깔끔한 인상을 주도록 개선했습니다. 메인 페이지의 첫 화면에는 리스테린의 캠페인 문구 중 하나인 “Listerine, Your Routine”을 배치하여 브랜드 메시지를 직관적으로 전달하고, 자연스럽게 시선을 집중시킬 수 있도록 구성했습니다. 또한 동적인 인터랙션 효과를 더해 생동감을 주었으며, 반응형 디자인을 적용해 다양한 디바이스 환경에서도 일관된 사용자 경험을 제공할 수 있도록 했습니다.</p>
+                    </div>
+                    <button type="button"><a href="https://sujin810-gif.github.io/listerine/" target="_blank">VISIT SITE<img src="../images/sub_3/visit_arrow_2.png" alt=""></a></button>
+                </div>
+            </div>
+            <div class="bot_img"><img src="../images/sub_3/cc_img.png" alt=""></div>
+        </section>
+        <!-- uiux -->
+        <section class="lt_uiux">
+            <ul>
+                <li><img src="../images/sub_3/main.png" alt=""></li>
+                <li><img src="../images/sub_3/products.png" alt=""></li>
+                <li><img src="../images/sub_3/products_dt.png" alt=""></li>
+            </ul>
+        </section>
+        <!-- footer -->
+        <div class="lt_bottom">
+            <div class="slide">
+                <ul>
+                    <li><img src="/images/sub_3/bot_logo.png" alt=""></li>
+                    <li><img src="/images/sub_3/bot_logo.png" alt=""></li>
+                    <li><img src="/images/sub_3/bot_logo.png" alt=""></li>
+                    <li><img src="/images/sub_3/bot_logo.png" alt=""></li>
+                    <li><img src="/images/sub_3/bot_logo.png" alt=""></li>
+                    <li><img src="/images/sub_3/bot_logo.png" alt=""></li>
+                    <li><img src="/images/sub_3/bot_logo.png" alt=""></li>
+                    <li><img src="/images/sub_3/bot_logo.png" alt=""></li>
+                    <li><img src="/images/sub_3/bot_logo.png" alt=""></li>
+                    <li><img src="/images/sub_3/bot_logo.png" alt=""></li>
+                </ul>
+                <ul>
+                    <li><img src="/images/sub_3/bot_logo.png" alt=""></li>
+                    <li><img src="/images/sub_3/bot_logo.png" alt=""></li>
+                    <li><img src="/images/sub_3/bot_logo.png" alt=""></li>
+                    <li><img src="/images/sub_3/bot_logo.png" alt=""></li>
+                    <li><img src="/images/sub_3/bot_logo.png" alt=""></li>
+                    <li><img src="/images/sub_3/bot_logo.png" alt=""></li>
+                    <li><img src="/images/sub_3/bot_logo.png" alt=""></li>
+                    <li><img src="/images/sub_3/bot_logo.png" alt=""></li>
+                    <li><img src="/images/sub_3/bot_logo.png" alt=""></li>
+                    <li><img src="/images/sub_3/bot_logo.png" alt=""></li>
+                </ul>
+            </div>
+        </div>
+        <!-- 뷰포트에 보이면 작동 & 리작동 -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const targets = document.querySelectorAll('.tit');
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            // 화면에 보이면 active 추가
+                            entry.target.classList.add('active');
+                        } else {
+                            // 화면에서 벗어나면 active 제거
+                            entry.target.classList.remove('active');
+                        }
+                    });
+                }, {
+                    threshold: 0.1 // 10%만 보여도 실행
+                });
+
+                targets.forEach(t => observer.observe(t));
+            });
+        </script>
+    </div>
+</body>
+
+</html>

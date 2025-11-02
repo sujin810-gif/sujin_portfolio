@@ -505,3 +505,211 @@ footer .letter_wrap p {font-size: 3.8rem; font-family: 'Taenada'; color: #FFA3BC
 .khd_last ul:hover {
     animation-play-state: paused;
 }
+
+/* 서브3 - 리스테린 */
+/* 탑버튼 */
+.listerine_wrap #top_btn {width: 90px; height: 80px; position: fixed; bottom: 50px; right: 50px; cursor: pointer; z-index: 999; background-color: #fff; border: 2px solid #171717;  border-radius: 30px; display: none; align-items: center; justify-content: center; color: #171717; font-size: 2.4rem; font-family: 'PyeongchangPeace'; }
+/* 네비바 */
+.listerine_nav ul {display: flex; justify-content: space-between; align-items: center; padding: 70px 170px 0px 170px; box-sizing: border-box;}
+.listerine_nav li {width: 240px; height: 50px; background-color: #fff; border-radius: 50px; display: flex; align-items: center; justify-content: center; border: 2px solid #656565;}
+.listerine_nav li a {width: 240px; font-size: 2.4rem; font-family: 'Taenada'; display: flex; align-items: center; justify-content: space-between; color: #656565;}
+.listerine_nav li:first-child {padding-left: 20px; padding-right: 30px; box-sizing: border-box; }
+.listerine_nav li:last-child {padding-left: 30px; padding-right: 13px; box-sizing: border-box;}
+
+/* 서브3_리스테린 메인화면 */
+.lt_main {padding: 0 170px; margin-top: 60px; display: flex; align-items: flex-end; justify-content: center; gap: 20px;}
+.lt_main .overview {width: 1350px; height: 690px; background: #fff; border: 2px solid #686868;}
+.lt_main .overview .top {width: 100%; height: 75px; border-bottom: 2px solid #686868; display: flex; align-items: center; justify-content: space-between;}
+.lt_main .overview .top .x {width: 60px; height: 60px; position: relative; margin-left: 10px;}
+.lt_main .overview .top .x > div {width: 56px; height: 2px; background-color: #686868; }
+.lt_main .overview .top .x > div:first-child {position: absolute; top: 50%; transform: translateY(-50%) rotate(45deg);}
+.lt_main .overview .top .x > div:last-child {position: absolute; top: 50%; transform: translateY(-50%) rotate(-45deg);}
+
+/* 리스테린 팝오버 */
+.lt_main .popover {anchor-name: --info-button;}
+
+.lt_main .popover .btn-open {border: none; background: #939393; width: 75px; height: 75px; font-size: 3rem; font-weight: 700; color: #fff; transition: .2s;}
+.lt_main #popup3 {width: 327px; height: 192px; background-color: #fff; border: 2px solid #919191; position-anchor: --info-button; position: absolute; top: anchor(top); left: anchor(left); margin-left: -340px; margin-top: 20px;}
+.lt_main #popup3 ul {position: absolute; top: 50%; left: 20%; transform: translate(-20%, -50%); display: flex; gap: 15px; flex-direction: column;}
+.lt_main #popup3 li {display: flex; align-items: center;}
+.lt_main #popup3 li p {font-size: 2rem; color: #1c1c1c; margin-bottom: 2px; font-weight: 700; font-family: 'Pyeongchang';}
+.lt_main #popup3 li span {font-size: 2rem; color: #686868; font-weight: normal; margin-right: 20px;}
+.lt_main #popup3 li img {margin-right: 20px;}
+
+.lt_main .popover .btn-open:hover {background-color: #1c1c1c; transition: .6s;}
+
+/* 서브3_메인 컨텐츠 */
+.lt_main .overview .cont_wrap {display: flex;}
+.lt_main .overview .cont_wrap .photo {width: 686px; height: 613px; background: url(../images/sub_3/main_img.jpg) no-repeat left top; background-size: 140%; background-position-y: -60px;}
+.lt_main .overview .cont_wrap > div:last-child {margin-left: 60px;}
+
+/* 서브3_오버뷰 */
+.lt_main .overview .cont_wrap .letter {width: 551px; margin-top: 170px;}
+.lt_main .overview .cont_wrap .letter .tit {font-size: 10rem; color: #DBDBDB; font-family: "Bebas Neue"; line-height: 100%;}
+.lt_main .overview .cont_wrap .letter p {font-size: 1.8rem; color: #000; line-height: 170%; margin-top: 20px;}
+.lt_main .overview .cont_wrap .letter p span {font-size: 2.8rem; color: #000;}
+
+/* 글자 올라오는 효과 */
+.lt_main .overview .cont_wrap .letter .tit_wrap {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.lt_main .overview .cont_wrap .letter .tit.active {
+    display: inline-block;
+    animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    transform: translateY(0) rotate(0);
+    opacity: 1;
+}
+
+@keyframes reveal {
+    0% {
+        transform: translateY(100%) rotate(8deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+}
+
+/* 마우스 포인터 */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* 마우스 이벤트 무시 */
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out; /* 부드럽게 따라다님 */
+    z-index: 9999;
+    opacity: 0; /* 처음에는 숨김 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-weight: bold;
+    color: #383838;
+    background: rgba(255,255,255,0.4);
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    font-size: 2rem;
+    font-weight: 700;
+    border: 2px solid #B4B4B4;
+    backdrop-filter: blur(3px); /* 배경 블러 */
+    -webkit-backdrop-filter: blur(3px); /* 사파리 지원 */
+}
+
+.custom-cursor img {animation: moved .6s ease-in-out infinite alternate;} 
+
+@keyframes moved {
+    from {
+    transform: translateX(0px);
+    }
+    50% {
+    transform: translateX(5px);
+    }
+    to {
+    transform: translateX(0px);
+    }
+}
+
+
+/* 호버 시 나타나게 */
+.cont_wrap:hover ~ .custom-cursor,
+.cont_wrap:hover + .custom-cursor {
+    opacity: 1;
+}
+.cont_wrap:hover {cursor: none;}
+
+/* 서브3_컬러 팔레트 */
+.lt_color {width: 100% ; height: auto; display: flex; flex-direction: column; margin-top: 200px; justify-content: center; align-items: center;}
+.lt_color .tit_wrap {overflow: hidden; width: 100%; height: auto; text-align: center;}
+.lt_color .tit {font-size: 8rem; color: #303030; font-family: "Bebas Neue"; text-align: center; margin: 0 auto; line-height: 100%;}
+.lt_color .cont {font-size: 2rem; color: #4B4B4B; text-align: center; width: 1067px; margin-top: 20px;}
+
+.lt_color .palette {margin-top: 80px;}
+.lt_color .palette ul {
+    width: 1400px;
+    display: flex;
+    flex-wrap: wrap; /* 화면 크기에 따라 줄 바꿈 */
+    align-items: center;
+    justify-content: center;
+    gap: 40px;       /* 아이템 간격 */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.lt_color .palette li {width: 432px; height: 152px; border: 2px solid #D4D4D4; display: flex; justify-content: space-between; padding: 15px 20px; box-sizing: border-box; background-color: #fff;}
+.lt_color .palette li > div:last-child {width: 164px; height: 116px; border: 2px solid #D4D4D4; display: flex;}
+.lt_color .palette .letter_wrap {display: flex; flex-direction: column; justify-content: end;}
+.lt_color .palette .letter_wrap p {font-size: 2.4rem; color: #525252; font-weight: 700;}
+.lt_color .palette .letter_wrap span {font-size: 2rem; font-weight: 700; color: #D4D4D4; font-family: 'Pyeongchang';}
+.lt_color .palette li:nth-child(1) > div:last-child { background-color: #b36bd0; }
+.lt_color .palette li:nth-child(2) > div:last-child { background-color: #a2e0e2; }
+.lt_color .palette li:nth-child(3) > div:last-child { background-color: #169056; }
+.lt_color .palette li:nth-child(4) > div:last-child { background-color: #1c1c1c; }
+.lt_color .palette li:nth-child(5) > div:last-child { background-color: #ffffff; }
+
+.lt_font {width: 100%; height: auto; margin: 0 auto; margin-top: 160px; padding: 0 170px; box-sizing: border-box; display: flex; align-items: end; justify-content: center;}
+.lt_font .left {display: flex; flex-direction: column; align-items: center;}
+.lt_font .left .tit {font-size: 8rem; font-family: "Bebas Neue"; color: #A3A3A3;}
+.lt_font .left .box {width: 780px; height: 341px; border-radius: 30px; background-color: #f5f5f5; display: flex; flex-direction: column; justify-content: center; margin-top: 40px; padding: 0 80px; box-sizing: border-box;}
+.lt_font .left .box .semi_tit {font-size: 2.8rem; font-family: 'Pretendard'; font-weight: 500; color: #9F9F9F; margin-bottom: 20px;}
+.lt_font .left .box p {font-size: 2rem; color: #353535; line-height: 150%;}
+.lt_font .left .box p span {font-size: 3rem;}
+.lt_font .left .box p:last-child {margin-left: 10px;}
+.lt_font .right {width: 780px; height: 530px; border: 2px solid #E8E8E8; box-sizing: border-box; margin-left: 20px; padding: 0 80px; display: flex; flex-direction: column; justify-content: center; overflow: hidden; position: relative;}
+.lt_font .right .semi_tit {font-size: 2.8rem; color: #BCBCBC; font-family: 'Pretendard'; margin-bottom: 30px;}
+.lt_font .right li {color: #404040;}
+.lt_font .right ul {margin-left: 10px;}
+.lt_font .right li:first-child {margin-bottom: 20px;}
+.lt_font .right > div:first-child {margin-bottom: 70px;}
+.lt_font .right > div:first-child li:first-child {font-size: 7.2rem; font-family: 'Taenada';}
+.lt_font .right > div:first-child li:last-child {font-size: 3.2rem; font-family: 'Pretendard'; font-weight: 600;}
+.lt_font .right > div:nth-child(2) li:first-child {font-size: 3.2rem; font-family: 'Pretendard'; font-weight: 700;}
+.lt_font .right > div:nth-child(2) li:last-child {font-size: 1.8rem; font-family: 'Pretendard'; font-weight: 500;}
+.lt_font .right > div:last-child {font-size: 28rem; color: #F5F5F5; font-family: 'Pretendard'; font-weight: 700; position: absolute; right: -40px; bottom: -50px; z-index: -50;}
+
+
+/* 서브3_디자인 컨셉 */
+
+.lt_concept {margin:0 auto;}
+.lt_concept .letter {width: 100%; height: 603px; background-color: #242424; display: flex; justify-content: center; align-items: center; margin-top: 120px;}
+.lt_concept .letter > div {margin-top: -140px; display: flex; gap: 60px;}
+.lt_concept .top_wrap .tit_wrap {display: inline-block; overflow: hidden;}
+.lt_concept .top_wrap .tit {font-size: 8rem; font-family: "Bebas Neue"; color: #fff;} 
+.lt_concept .top_wrap .tit.active {
+    display: inline-block;
+    animation: reveal 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+    transform: translateY(0) rotate(0);
+    opacity: 1;
+}
+
+.lt_concept .top_wrap p {font-size: 2rem; color: #fff; width: 811px; line-height: 150%;}
+.lt_concept .letter button[type="button"] {border: none; background: none;}
+.lt_concept .letter button[type="button"] a {border: 2px solid #fff; width: 200px; height: 200px; background-color: #242424; border-radius: 50%; display: flex; flex-direction: column; gap: 10px; font-size: 2.8rem; color: #fff; align-items: center; justify-content: center; margin-top: 40px; transition: .6s;}
+.lt_concept .letter button[type="button"] img {width: 33px; height: 11px;}
+.lt_concept .bot_img img {position: relative; left: 50%; transform: translateX(-50%); top: -150px;}
+
+.lt_concept .letter button[type="button"] a:hover {background-color: rgba(255, 255, 255, .3); transition: .6s;}
+
+/* 서브3_uiux */
+.lt_uiux {width: 1581px; height: 1110px; margin: 0 auto; margin: 0 auto; background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)), url(../images/sub_3/last_img.png); border-radius: 10px; padding: 50px 80px; box-sizing: border-box;}
+.lt_uiux ul {display: flex; align-items: center; justify-content: space-between;}
+.lt_uiux li img {width: 450px; height: auto; border-radius: 15px; border: 2px solid #ADADAD;}
+
+/* 서브3-푸터 */
+.lt_bottom {width: 100%; height: auto; padding: 15px; box-sizing: border-box; background-color: #242424; overflow: hidden; margin-top: 80px;}
+.lt_bottom .slide {display: flex; width: max-content; animation: slideLeft 30s linear infinite; gap: 70px;}
+.lt_bottom ul {display: flex; gap: 70px; }
+
+@keyframes slideLeft {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%); /* 움직이는 거리 */
+    }
+}
