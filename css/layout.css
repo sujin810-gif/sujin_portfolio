@@ -197,9 +197,11 @@ header nav li:hover a , header nav li[active="1"] a {font-size: 3rem; filter: dr
 .works .content .box ul {display: flex; gap: 5px; margin-top: 60px; margin-bottom: 15px;}
 .works .content .box .white {width: 235px; height: 80px; background-color: #fff; border-radius: 10px ; font-size: 2.6rem; font-weight: 700; display: flex; justify-content: center; align-items: center; color: #404040;}
 
+/* 워크 호버시 */
 .works .box_wrap:hover .paper {transform: translateX(-50%) translateY(-40%); transition: transform 0.7s; }
 .works .box_wrap:hover .paper_01 {background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)), #fff url(../images/prj_hover_01.png) no-repeat; background-position: center 20px;}
 .works .box_wrap:hover .paper_02 {background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)), #fff url(../images/prj_hover_02.png) no-repeat; background-position: center 20px;}
+.works .box_wrap:hover .paper_03 {background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)), #fff url(../images/prj_hover_03.png) no-repeat; background-position: center 20px;}
 
 /* 컨택 */
 .contact {width: 100%; height: 686px; background: #5EC8F2; position: relative; display: flex; align-items: center; justify-content: center;}
