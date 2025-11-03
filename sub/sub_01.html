@@ -6,13 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAMSUNGLIONS</title>
     <link rel="stylesheet" href="../css/layout.css">
-    <link href="css/fixed-positioning.css" rel="stylesheet" type="text/css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 
 <body>
+    <a href="#sl_main" class="blind">본문 바로가기</a>
     <div class="sl_wrap">
         <!-- 탑버튼 -->
         <button id="top_btn">top</button>
@@ -37,15 +35,16 @@
             });
         </script>
         <!-- 네비바 -->
-        <section class="sub_nav">
+        <div class="sub_nav">
             <ul>
-                <li><a href="../index.html"><img src="../images/sub_1/left_arrow.png" alt="">back home</a></li>
-                <li><a href="sub_02.html">next project<img src="../images/sub_1/right_arrow.png" alt=""></a></li>
+                <li><a href="../index.html"><img src="../images/sub_1/left_arrow.png" alt="홈으로 가기">back home</a></li>
+                <li><a href="sub_02.html">next project<img src="../images/sub_1/right_arrow.png" alt="다음 프로젝트 보기"></a></li>
             </ul>
-        </section>
+        </div>
         <!-- 메인화면 -->
         <section class="sl_main">
-            <img class="main_img" src="../images/sub_1/mockup_1.png" alt="">
+            <h2 class="blind">삼성라이온즈 메인</h2>
+            <img class="main_img" src="../images/sub_1/mockup_1.png" alt="메인 비주얼 이미지">
             <div class="sl_produce">
                 <div class="top">
                     <ul>
@@ -64,29 +63,30 @@
                 <!-- popover -->
                 <div class="bottom">
                     <div class="popover">
-                        <button class="btn-open" popovertarget="popup1" popovertargetaction="toggle"><img src="../images/sub_1/info_ico.png" alt=""></button>
+                        <button class="btn-open" popovertarget="popup1" popovertargetaction="toggle"><img src="../images/sub_1/info_ico.png" alt="프로젝트 정보"></button>
                         <div id="popup1" popover>
                             <ul>
-                                <li><img src="../images/sub_1/popover_01.png" alt="">
+                                <li><img src="../images/sub_1/popover_01.png" alt="프로젝트 걸린 시간">
                                     <p>4 days</p>
                                 </li>
-                                <li><img src="../images/sub_1/popover_02.png" alt="">
+                                <li><img src="../images/sub_1/popover_02.png" alt="프로젝트 사용한 도구">
                                     <p>Figma</p>
                                 </li>
-                                <li><img src="../images/sub_1/popover_03.png" alt="">
+                                <li><img src="../images/sub_1/popover_03.png" alt="프로젝트 기여도">
                                     <p>기여도 100%</p>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="watch_www">
-                        <a href="https://www.samsunglions.com/index.asp" target="_blank">기존 웹사이트<img src="../images/sub_1/www_btn.png" alt=""></a>
+                        <a href="https://www.samsunglions.com/index.asp" target="_blank">기존 웹사이트<img src="../images/sub_1/www_btn.png" alt="기존 웹사이트로 가기"></a>
                     </div>
                 </div>
             </div>
         </section>
         <!-- 컬러설명 -->
         <section class="sl_color">
+            <h2 class="blind">디자인가이드</h2>
             <div class="sl_color_pr">
                 <div class="top">
                     <ul>
@@ -151,6 +151,7 @@
         </section>
         <!-- 디자인컨셉 -->
         <section class="sl_concept">
+            <h2 class="blind">디자인컨셉</h2>
             <div class="font">
                 <div class="top">
                     <ul>
@@ -165,8 +166,8 @@
                     <p>Pretendard</p>
                 </div>
             </div>
-            <div class="img"><img src="../images/sub_1/ex_samsung_01.png" alt=""><img
-                    src="../images/sub_1/ex_samsung_02.png" alt=""></div>
+            <div class="img"><img src="../images/sub_1/ex_samsung_01.png" alt="시안 메인 이미지"><img
+                    src="../images/sub_1/ex_samsung_02.png" alt="시안 본문 이미지"></div>
             <div class="letter">
                 <div class="right">
                     <p class="b_box">디자인 전반에 <span>직선의 이미지</span>를 활용하여<br>스포츠팀 특유의 에너지와 강인함을 강조하였습니다.</p>
@@ -215,6 +216,7 @@
         </section>
         <!-- 시안 나열 -->
         <section class="sl_designs">
+            <h2 class="blind">UIUX</h2>
             <div class="pc">
                 <div>
                     <div class="top">
@@ -225,7 +227,7 @@
                         </ul>
                         <p>main_page</p>
                     </div>
-                    <div><img src="../images/sub_1/samsung_01.png" alt=""></div>
+                    <div><img src="../images/sub_1/samsung_01.png" alt="메인페이지 시안"></div>
                 </div>
                 <div>
                     <div class="top">
@@ -236,7 +238,7 @@
                         </ul>
                         <p>sub_page_01</p>
                     </div>
-                    <div><img src="../images/sub_1/samsung_02.png" alt=""></div>
+                    <div><img src="../images/sub_1/samsung_02.png" alt="첫번째 서브페이지 시안"></div>
                 </div>
                 <div>
                     <div class="top">
@@ -247,7 +249,7 @@
                         </ul>
                         <p>sub_page_02</p>
                     </div>
-                    <div><img src="../images/sub_1/samsung_03.png" alt=""></div>
+                    <div><img src="../images/sub_1/samsung_03.png" alt="두번째 서브페이지 시안"></div>
                 </div>
                 <div>
                     <div class="top">
@@ -258,11 +260,11 @@
                         </ul>
                         <p>sub_page_03</p>
                     </div>
-                    <div><img src="../images/sub_1/samsung_04.png" alt=""></div>
+                    <div><img src="../images/sub_1/samsung_04.png" alt="세번째 서브페이지 시안"></div>
                 </div>
             </div>
             <div class="mobile">
-                <p>mobile</p><img src="../images/sub_1/mobile.png" alt="">
+                <p>mobile</p><img src="../images/sub_1/mobile.png" alt="모바일 메인페이지 시안">
             </div>
         </section>
         <script>
