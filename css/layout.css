@@ -375,13 +375,14 @@ footer .letter_wrap p {font-size: 3.8rem; font-family: 'Taenada'; color: #FFA3BC
 .sl_concept .letter > div:nth-child(7).active { opacity: 1; transform: translateX(0);}
 
 /* 디자인 나열 */
-.sl_designs {width: 100%; height: 5060px; background-color: #F2F3F3; padding-left: 170px; padding-right: 170px; box-sizing: border-box; display: flex; justify-content: space-between;}
+.sl_designs {width: 100%; height: 5060px; background-color: #F2F3F3; padding-left: 170px; padding-right: 170px; box-sizing: border-box; display: flex; justify-content: center; gap: 140px; padding: 100px 0; box-sizing: border-box;}
 
-.sl_designs .pc > div {border-radius: 20px; overflow: hidden;}
+
+.sl_designs .pc > div {border-radius: 20px; overflow: hidden; margin-bottom: 60px;}
 .sl_designs .pc > div:nth-child(1) {width: 970px; height: 1695px; border: 2px solid #5EC8F2;}
 .sl_designs .pc > div:nth-child(2) {width: 970px; height: 1179px; border: 2px solid #AEAEAE;}
 .sl_designs .pc > div:nth-child(3) {width: 970px; height: 917px; border: 2px solid #5EC8F2;}
-.sl_designs .pc > div:nth-child(4) {width: 970px; height: 788px; border: 2px solid #AEAEAE;}
+.sl_designs .pc > div:nth-child(4) {width: 970px; height: 788px; border: 2px solid #AEAEAE; margin-bottom: 0;}
 .sl_designs .pc > div img {width: 970px;}
 .sl_designs .pc p {font-size: 1.8rem; font-family: 'PpObBat'; color: #fff; margin-left: 30px;}
 .sl_designs .mobile p {font-size: 1.8rem; font-family: 'PpObBat'; color: #fff; margin-bottom: 20px; background-color: #AEAEAE; border-radius: 30px; display: flex; align-items: center; justify-content: center; width: 102px; height: 32px;}
