@@ -182,7 +182,7 @@ header nav li:hover a , header nav li[active="1"] a {font-size: 3rem; filter: dr
 .about_me .profile .clip {position: absolute; right: 100px; top: -71px; z-index: 888;}
 
 .profile .left {display: flex; flex-direction: column; align-items: center; position: absolute; left: 140px; top: 126px;}
-.profile .left .face {width: 280px; height: 280px; background: #ccc; border-radius: 500px;}
+.profile .left .face {width: 280px; height: 280px; background: url(../images/sujin.jpg) no-repeat center; background-size: 224px auto; background-position: top 10px center; border-radius: 500px; border: 1px solid #ccc;}
 .profile .left .name {display: flex;  flex-direction: column; align-items: center; margin-top: 20px;}
 .profile .left .name .b {font-size: 2.2rem; color: #808080;}
 .profile .left .name .n {font-size: 2.4rem; font-weight: 700; color: #9e9e9e;}
