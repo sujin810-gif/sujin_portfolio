@@ -862,7 +862,7 @@ footer .letter_wrap p {font-size: 3.8rem; font-family: 'Taenada'; color: #FFA3BC
 .kd_main .bot > div,
 .kd_main .bot > div > div {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translateY(200px);
     transition: all 1s ease;
 }
 
