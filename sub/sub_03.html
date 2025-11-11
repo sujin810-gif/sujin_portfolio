@@ -241,25 +241,24 @@
         </div>
         <!-- 뷰포트에 보이면 작동 & 리작동 -->
         <script>
-            document.addEventListener('DOMContentLoaded', () => {
-                const targets = document.querySelectorAll('.tit');
+            const targets = document.querySelectorAll('.tit');
 
-                const observer = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            // 화면에 보이면 active 추가
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // 0.3초 딜레이 후 active 추가
+                        setTimeout(() => {
                             entry.target.classList.add('active');
-                        } else {
-                            // 화면에서 벗어나면 active 제거
-                            entry.target.classList.remove('active');
-                        }
-                    });
-                }, {
-                    threshold: 0.1 // 10%만 보여도 실행
+                        }, 300);
+                    } else {
+                        entry.target.classList.remove('active');
+                    }
                 });
-
-                targets.forEach(t => observer.observe(t));
+            }, {
+                threshold: 0.1
             });
+
+            targets.forEach(t => observer.observe(t));
         </script>
     </div>
 </body>
