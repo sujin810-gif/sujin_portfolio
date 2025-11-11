@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KWANGDONG</title>
+    <link rel="stylesheet" href="../css/layout.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+    <a href="#kd_main" class="blind">본문 바로가기</a>
+    <div class="kwangdong_wrap">
+        <!-- 탑버튼 -->
+        <button id="top_btn">top</button>
+        <script>
+            $(document).ready(function () {
+
+                // Top 버튼 특정 스크롤높이에서만 보이기 / 숨기기
+                $(window).scroll(function () {
+                    if ($(this).scrollTop() > 100) {
+                        $('#top_btn').fadeIn();
+                    } else {
+                        $('#top_btn').fadeOut();
+                    }
+                });
+
+                // Top 버튼 클릭시 페이지 상단으로 이동
+                $('#top_btn').click(function () {
+                    $('html, body').animate({ scrollTop: 0 }, 800);
+                    return false;
+                });
+            });
+        </script>
+        <!-- 네비바 -->
+        <div class="kwangdong_nav">
+            <ul>
+                <li><a href="../index.html"><img src="../images/sub_1/left_arrow.png" alt="홈으로 가기">back home</a></li>
+                <li><a href="sub_01.html">first project<img src="../images/sub_1/right_arrow.png" alt="다음 프로젝트 보기"></a></li>
+            </ul>
+        </div>
+        <!-- main vs -->
+        <section class="kd_main">
+            <h2 class="blind">광동제약 메인</h2>
+            <div class="top">
+                <div class="kd_logo"><p>LOGO</p><img src="../images/sub_4/logo.svg" alt=""></div>
+                <div class="project">
+                    <div class="tit">PROJECT</div>
+                    <div class="cont">
+                        <p>광동제약 redesign</p>
+                        <span>: 광동제약은 1963년에 설립된 국내 대표 제약회사 중 하나로, 의약품, 건강음료, 한방의약품 등을 개발·생산하고 있습니다.</span>
+                    </div>
+                </div>
+                <div class="overview">
+                    <div class="tit">OVERVIEW</div>
+                    <div class="cont">
+                        <p>기존 홈페이지는 기업의 정체성과 비전을 전달하기보다는 제품 중심의 구성으로 이루어져 있어, 이를 보완하고 <span>‘회사 사이트로서의 역할과 브랜드 아이덴티티를 강화’</span>하기 위해 본 프로젝트를 진행하게 되었습니다.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bot">
+                <div class="left">
+                    <div class="grid">
+                        <div class="tit">GRID</div>
+                        <div class="cont">
+                            <ul>
+                                <li>Column</li>
+                                <li>Margin</li>
+                                <li>Gutter</li>
+                            </ul>
+                            <ul>
+                                <li>12</li>
+                                <li>280</li>
+                                <li>20</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="proposal">
+                        <a href="#kd_uiux" class="kd-scroll">DESIGN<br>PROPOSAL<img src="../images/sub_4/proposal_arrow.png" alt="디자인 시안으로 넘어가기"></a>
+                    </div>
+                </div>
+                <div class="middle">
+                    <div class="design_giude">
+                        <div class="tit">DESIGN GUIDE</div>
+                        <div class="cont">
+                            <div class="font">
+                                <p>Typography</p>
+                                <div>
+                                    <ul>
+                                        <li>h1</li>
+                                        <li>h2</li>
+                                        <li>body</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Pretendard</li>
+                                        <li>Pretendard</li>
+                                        <li>Pretendard</li>
+                                    </ul>
+                                    <ul>
+                                        <li>bold</li>
+                                        <li>bold</li>
+                                        <li>medium</li>
+                                    </ul>
+                                    <ul>
+                                        <li>20px</li>
+                                        <li>70px</li>
+                                        <li>20px</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="color">
+                                <p>Color</p>
+                                <ul>
+                                    <li>
+                                        <span></span>
+                                        <p>#FFFFFF</p>
+                                    </li>
+                                    <li>
+                                        <span></span>
+                                        <p>#181818</p>
+                                    </li>
+                                    <li>
+                                        <span></span>
+                                        <p>#EF4023</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right">
+                    <div class="top_wrap">
+                        <div class="view">
+                            <a href="https://sujin810-gif.github.io/kwangdong/" target="_blank">
+                                <p>VIEW<br>SITE</p>
+                                <img src="../images/sub_4/view_arrow.png" alt="광동제약 보러가기">
+                            </a>
+                        </div>
+                        <div class="concept">
+                            <div class="tit">CONCEPT</div>
+                            <p>기존 네비게이션 메뉴는 체계적으로 구성되어 있어 일부 명칭만 조정했으며, 회사가 추구하는 <span>헬스케어 이미지</span>를 강조하고, <span>기업 사이트라는 정체성</span>을 확실히 드러내도록 설계했습니다. 또한 동적인 효과를 적용하여 사용자가 사이트에 보다 몰입할 수 있도록 구현했습니다.</p>
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div class="tit">INFOMATION</div>
+                        <div class="cont">
+                            <ul>
+                                <li class="semi_tit">Tool</li>
+                                <li>Figma</li>
+                                <li>VScode</li>
+                            </ul>
+                            <ul>
+                                <li class="semi_tit">Duration</li>
+                                <li>2 days</li>
+                                <li>2.5 days</li>
+                            </ul>
+                            <ul>
+                                <li class="semi_tit">Contribution</li>
+                                <li>100%</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="clip" src="../images/sub_4/clip_img.png" alt="">
+        </section>
+        <section class="kd_uiux" id="kd_uiux">
+            <h2 class="blind">광동제약 시안</h2>
+            <div class="tit">DESIGN PROPOSAL</div>
+            <div class="main_wrap">
+                <img src="../images/sub_4/main_01.png" alt="광동제약 메인시안1">
+                <img src="../images/sub_4/main_02.png" alt="광동제약 메인시안2">
+            </div>
+        </section>
+    </div>
+    <!-- 부드럽게 광동시안으로 스트롤 -->
+    <script>
+        document.querySelector('.kd-scroll').addEventListener('click', function (e) {
+            e.preventDefault(); // 기본 앵커 동작 막기
+
+            document.querySelector('#kd_uiux').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    </script>
+    <!-- 시안 스크롤 -->
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');   // 화면 안에 들어오면 show 추가
+                } else {
+                    entry.target.classList.remove('show'); // 벗어나면 show 제거
+                }
+            });
+        });
+
+        // 관찰 대상 등록
+        document.querySelectorAll('.kd_uiux').forEach(el => observer.observe(el));
+    </script>
+    <!-- 메인 카드들이 순차적으로 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        // 순차 등장 효과
+                        setTimeout(() => {
+                            entry.target.classList.add('show');
+                        }, index * 150);
+
+                        // 한 번 등장 후 더 이상 관찰하지 않음
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1 // 10% 보일 때 트리거
+            });
+
+            // 관찰 대상 선택
+            document.querySelectorAll('.kd_main .top > div, .kd_main .bot > div, .kd_main .bot > div > div, .kd_main .clip')
+                .forEach(el => observer.observe(el));
+        });
+    </script>
+</body>
+
+</html>
