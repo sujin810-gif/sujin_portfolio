@@ -1,448 +1,231 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Listerine</title>
+    <title>JISUJIN</title>
     <link rel="stylesheet" href="css/layout.css">
-    <link href="css/fixed-positioning.css" rel="stylesheet" type="text/css" />
+    <link href="css/fixed-positioning.css" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    
 </head>
+
 <body>
-    <a href="#main_vs" class="blind">본문으로 넘어가기</a>
-    <!-- Navigation -->
-    <header>
-        <h1><a href="index.html" aria-label="홈페이지로 돌아가기"><img src="images/logo.svg" alt=""></a></h1>
-        <nav>
-            <div class="menu">
-                <ul>
-                    <li><a href="javascript:void()"><p>Brand</p></a></li>
-                    <li><a href="sub/sub_01.html"><p>Products</p></a></li>
-                    <li>
-                        <a href="javascript:void()"><p>Oral Care</p></a>
-                        <ul class="submenu">
-                            <li><a href="javascript:void()"><p>구취</p></a></li>
-                            <li><a href="javascript:void()"><p>잇몸질환</p></a></li>
-                            <li><a href="javascript:void()"><p>플라그</p></a></li>
-                            <li><a href="javascript:void()"><p>치아 미백</p></a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="javascript:void()"><p>Why LISTERINE?</p></a>
-                        <ul class="submenu">
-                            <li><a href="javascript:void()"><p>구강청결제의 필요성</p></a></li>
-                            <li><a href="javascript:void()"><p>어린이 안전캡</p></a></li>
-                            <li><a href="javascript:void()"><p>친환경적 발걸음</p></a></li>
-                        </ul>
-                    </li>
+    <a href="#about_me" class="blind">본문 바로가기</a>
+    <div class="wrap" data-0="top:0px; display:block" data-5000="top:0px;" data-6500="top:-935px" data-8000="top:-2000px">
+        <!-- 헤더 -->
+        <header id="navbar-example">
+            <div class="top"><img src="images/smile_ico.png" alt="smile_ico"></div>
+            <nav>
+                <ul data-0="top:100px; position:fixed;" data-5000="top:100px;" data-5500="top:90px;" data-6000="top:80px;" data-6500="top:70px;" data-7000="top:60px;">
+                    <li data-0="@active: 0" data-10="@active: 1" data-4999="@active: 1" data-5500="@active: 0"><a href="#" data-menu-top="0">About Me</a></li>
+                    <li data-0="@active: 0" data-5000="@active: 1" data-7499="@active: 1" data-7500="@active:0"><a href="#" data-menu-top="6400">Works</a></li>
+                    <li data-0="@active: 0" data-7500="@active: 1" ><a href="#" data-menu-top="8000">Contact</a></li>
                 </ul>
-            </div>
-            <div class="buy"><a href="javascript:void()"><img src="images/ico_buy.png" alt="구매하러 가기">BUY</a></div>
-        </nav>
-        <div class="hbg_wrap">
-            <input type="checkbox" id="icon">
-            <label for="icon">  <!--label은 인라인 스타일-->
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-            <div id="header">
-                <ul>
-                    <li><a href="javascript:void()">Brand</a></li>
-                    <li><a href="sub/sub_01.html">Products</a></li>
-                    <li>
-                        <a href="javascript:void()">Oral Care</a>
-                        <ul class="hbg_submenu">
-                            <li><a href="javascript:void()">구취</a></li>
-                            <li><a href="javascript:void()">잇몸질환</a></li>
-                            <li><a href="javascript:void()">플라그</a></li>
-                            <li><a href="javascript:void()">치아 미백</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="javascript:void()">Why LISTERINE?</a>
-                        <ul class="hbg_submenu">
-                            <li><a href="javascript:void()">구강청결제의 필요성</a></li>
-                            <li><a href="javascript:void()">어린이 안전캡</a></li>
-                            <li><a href="javascript:void()">친환경적 발걸음</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <div class="buy"><a href="javascript:void()">BUY</a></div>
-            </div>
-        </div>
-    </header>
-    <script>
-        document.querySelectorAll('#header > ul > li > a').forEach(a => {
-            a.addEventListener('click', e => {
-                const submenu = a.nextElementSibling;
-                if (submenu && submenu.classList.contains('hbg_submenu')) {
-                    e.preventDefault(); // 링크 이동 방지
-
-                    // 이미 열려 있는 경우 닫기
-                    if (submenu.classList.contains('open')) {
-                        submenu.style.maxHeight = submenu.scrollHeight + 'px'; // 현재 높이 고정
-                        submenu.offsetHeight; // 강제 리플로우 (트랜지션 자연스럽게 작동하게)
-                        submenu.style.maxHeight = '0'; // 닫기 애니메이션
-                        submenu.classList.remove('open');
-                    } else {
-                        submenu.classList.add('open');
-                        submenu.style.maxHeight = submenu.scrollHeight + 'px'; // 내용 높이만큼 열기
-                    }
-                }
-            });
-        });
-    </script>
-    <!-- Main Visual -->
-    <div class="main_container" id="slider">
-        <section class="main_vs">
-            <h2 class="blind">리스테린 메인 비주얼</h2>
-            <div class="main_img"><img src="images/main_vs_img.png" alt=""></div>
-            <div class="letter">
-                <div class="txt_wrap">
-                    <p>Listerine,</p>
-                    <p>Your Routine.</p>
-                </div>
-                <p class="cont">1860년 소독제로 살균된 수술실에서 수술을 집도한 최초의 외과의사 Dr. Joseph Lister의 이름에서 유래된 리스테린은 130년이 넘는 시간동안 구강청결제 분야를 선도해 왔습니다.</p>
-                <div class="more_btn"><a href="javascript:void()"><p>브랜드 알아보기</p><div class="btn"></div></a></div>
-                <p class="prd_name">제품 리스테린®액 토탈케어 플러스</p>
-            </div>
-        </section>
-    </div>
-    <!-- Products -->
-    <section class="content" id="overflow">
-        <h2 class="blind">리스테린 컨텐츠 감싸기</h2>
-        <div class="Products">
-            <div class="tit" id="products-tit">Products</div>
-            <div class="items">
-                <ul class="indi">
-                    <li class="prevArrow"><img src="images/arrow_left.png" alt=""></li>
-                    <li class="nextArrow"><img src="images/arrow_right.png" alt=""></li>
-                </ul>
-                <ul class="slider">
-                    <li>
-                        <div class="flip-card">
-                            <div class="flip-inner">
-                                <div class="flip-front">
-                                    <a href="sub/sub_02.html">
-                                        <img src="images/prd_deepblue.webp" alt="리스테린®액  쿨민트 마우스워시">
-                                        <div>
-                                            <p>강한맛</p>
-                                            <p>민트향</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="flip-back">
-                                    <a href="sub/sub_02.html" class="back-content">
-                                        <h3>리스테린®액<br>쿨민트 마우스워시</h3>
-                                        <p></p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flip-card">
-                            <div class="flip-inner">
-                                <div class="flip-front">
-                                    <a href="sub/sub_02.html">
-                                        <img src="images/prd_blue.webp" alt="리스테린®액 쿨민트 마일드">
-                                        <div>
-                                            <p>약한맛</p>
-                                            <p>민트향</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="flip-back">
-                                    <a href="sub/sub_02.html" class="back-content">
-                                        <h3>리스테린®액<br>쿨민트 마일드</h3>
-                                        <p></p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flip-card">
-                            <div class="flip-inner">
-                                <div class="flip-front">
-                                    <a href="sub/sub_02.html">
-                                        <img src="images/prd_orange.webp" alt="리스테린®액 마우스워시 시트러스향">
-                                        <div>
-                                            <p>강한맛</p>
-                                            <p style="background-color: #FF7F4B;">시트러스향</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="flip-back">
-                                    <a href="sub/sub_02.html" class="back-content" style="background: linear-gradient(320deg, #FF7F4B, #ff9064, #fccdba);">
-                                        <h3>리스테린®액<br>마우스워시 시트러스향</h3>
-                                        <p></p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flip-card">
-                            <div class="flip-inner">
-                                <div class="flip-front">
-                                    <a href="sub/sub_02.html">
-                                        <img src="images/prd_deeppurple.webp" alt="리스테린®액 토탈케어 플러스">
-                                        <div>
-                                            <p>강한맛</p>
-                                            <p style="background-color: #E5E5E5; color: #1c1c1c;">기본향</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="flip-back">
-                                    <a href="sub/sub_02.html" class="back-content" style="background: linear-gradient(320deg, #9b4bbb, #b369d1, #e9b3ff);">
-                                        <h3>리스테린®액<br>토탈케어 플러스</h3>
-                                        <p></p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flip-card">
-                            <div class="flip-inner">
-                                <div class="flip-front">
-                                    <a href="sub/sub_02.html">
-                                        <img src="images/prd_purple.webp" alt="리스테린®액 토탈케어 마일드">
-                                        <div>
-                                            <p>약한맛</p>
-                                            <p style="background-color: #E5E5E5; color: #1c1c1c;">기본향</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="flip-back">
-                                    <a href="sub/sub_02.html" class="back-content" style="background: linear-gradient(320deg, #9b4bbb, #b369d1, #e9b3ff);">
-                                        <h3>리스테린®액<br>토탈케어 마일드</h3>
-                                        <p></p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="flip-card">
-                            <div class="flip-inner">
-                                <div class="flip-front">
-                                    <a href="sub/sub_02.html">
-                                        <img src="images/prd_deepgreen.webp" alt="리스테린®액 후레쉬 버스트">
-                                        <div>
-                                            <p>강한맛</p>
-                                            <p style="background-color: #00DE9B;">스피어민트향</p>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="flip-back">
-                                    <a href="sub/sub_02.html" class="back-content" style="background: linear-gradient(320deg, #0a6147, #1a8a68, #8ddac2);">
-                                        <h3>리스테린®액<br>후레쉬 버스트</h3>
-                                        <p></p>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="more_btn"><a href="sub/sub_01.html">제품 더보기</a></div>
-
-            <!-- 슬라이더 -->
-            <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-            <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-            <script>
-                $('.slider').slick({
-                    infinite: true,
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    prevArrow: $('.prevArrow'),
-                    nextArrow: $('.nextArrow'),
-                    responsive: [
-                        {
-                            breakpoint: 1200,
-                            settings: {
-                                arrows: false,
-                                centerMode: true,
-                                centerPadding: '-70px',
-                                slidesToShow: 1
-                            }
-                        },
-                    ]
-                });
-            </script>
-        </div>
-        <!-- 왜 리스테린? -->
-        <div class="reason_wrap">
-            <div class="reason">
-                <img class="Circle" src="images/img_circle.png" alt="">
-                <div class="tit">Why choose <span>LISTERINE?</span></div>
-                <div class="cont">
-                    <div class="num">
-                        <span>1</span>
-                        <div>
-                            <div>
-                                <p>칫솔이 닿지 않는 입안 구석, 그냥 두지 마세요.</p>
-                            </div>
-                            <div>
-                                <p>리스테린은 하루 두 번, 30초로 입안을 더 깊고 상쾌하게 씻어냅니다.</p>
-                            </div>
+            </nav>
+            
+        </header>
+        <!-- 메인 -->
+        <main>
+            <!-- ABOUT ME -->
+            <section class="about_me">
+                <h2 class="blind">about_me</h2>
+                <!-- 프로파일 -->
+                <div class="profile">
+                    <img class="clip" src="images/clip.png" alt="">
+                    <div class="left">
+                        <div class="face"></div>
+                        <div class="name">
+                            <p class="n"><span>지수진</span>ji sujin</p>
+                            <p class="b">1997.03.07</p>
                         </div>
                     </div>
-                    <div class="num">
-                        <span>2</span>
-                        <div>
-                            <div>
-                                <p>어른에게는 간편하게, 아이에게는 안전하게.</p>
-                            </div>
-                            <div>
-                                <p>리스테린의 안전캡은 가족의 안전까지 고려했습니다.</p>
-                            </div>
+                    <div class="right">
+                        <div class="first">
+                            <span class="tit">Education</span>
+                            <ul>
+                                <li><p>계명대학교 심리학과 졸업<span class="year">2016.03 - 2021.02</span></p></li>
+                                <li><p>성서고등학교 졸업<span class="year">2014.03 - 2016.02</span></p></li>
+                            </ul>
                         </div>
-                    </div>
-                    <div class="num">
-                        <span>3</span>
-                        <div>
-                            <div>
-                                <p>당신의 구강 건강은 물론, 지구의 내일도 함께 챙깁니다.</p>
-                            </div>
-                            <div>
-                                <p>리스테린은 재활용 가능한 포장과 믿을 수 있는 성분만을 담아요.</p>
-                            </div>
+                        <div class="second">
+                            <span class="tit">Skill</span>
+                            <ul>
+                                <li><img src="images/skill_01.png" alt="포토샵"></li>
+                                <li><img src="images/skill_02.png" alt="일러스트레이터"></li>
+                                <li><img src="images/skill_03.png" alt="피그마"></li>
+                                <li><img src="images/skill_04.png" alt="VSCode"></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-                <div class="more_btn"><a href="javascript:void()">자세히 알아보기</a></div>
-            </div>
-        </div>
-        <!-- 구강케어 -->
-        <div class="oral_care" id="care">
-            <div class="img"></div>
-            <div class="letter">
-                <a href="javascript:void()" class="text-container" id="text">Oral Care</a>
-                <a href="javascript:void()"><span>입 속부터 상쾌하게! 리스테린과 함께 알아보는 치아 건강 상식</span></a>
-                <div class="arrow"><a href="javascript:void()"><img src="images/last_arrow.png" alt="구강케어 보러가기"></a></div>
-            </div>
-        </div>
-        <!-- 어느순간 보이게 -->
-        <script>
-            window.addEventListener('scroll', function () {
-                const box = document.getElementById('care');
-                const triggerPoint = 950; // 스크롤 위치 (px)
+                <!-- 소개 -->
+                <div class="produce">
+                    <div class="card_01"><img src="images/card.png" alt="card1" data-500="top[swing]:60%; opacity:0;" data-1000="opacity:1; top:0%;"></div>
+                    <div class="card_02"><img src="images/card_02.png" alt="card2" data-1200="top[swing]:400px; opacity:0; right:50px" data-1700="opacity:1; top: 72px;">
+                    </div>
+                    <div class="card_03"><img src="images/card_03.png" alt="card3" data-1600="top[swing]:400px; opacity:0; right: 70px;" data-2200="opacity:1; top: 72px;">
+                    </div>
+                    <div class="letter" data-2500="opacity:0;" data-2800="opacity:1;">I am sujin,<br>a
+                        growth-oriented<br>professional who brings<br>logic to ideas
+                        and
+                        adds<br>value to results.
+                        <div class="under_line">
+                            <div class="line_01" data-3300="width:0px;" data-3700="width:250px; " data-4000="width:323px;"></div>
+                            <div class="line_02" data-3900="width:0px;" data-4300="width:180px; " data-4600="width:225px;"></div>
+                            <div class="line_03" data-4500="width:0px;" data-4800="width:200px; " data-5200="width:270px;"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </section>
+            <!-- WORKS -->
+            <section class="works" id="works">
+                <h2 class="blind">works</h2>
+                <div class="tit">Works</div>
+                <div class="content">
+                    <a href="sub/sub_01.html" class="box_wrap">
+                        <div class="box">
+                            <div class="ent"></div>
+                            <div class="prj_name">
+                                <span>01</span>
+                                <ul>
+                                    <li>web</li>
+                                    <li>redesign</li>
+                                </ul>
+                                <div class="white">samsung lions</div>
+                            </div>
+                        </div>
+                        <div class="paper paper_01"></div>
+                    </a>
+                    <a href="sub/sub_02.html" class="box_wrap">
+                        <div class="box">
+                            <div class="ent"></div>
+                            <div class="prj_name">
+                                <span>02</span>
+                                <ul>
+                                    <li>mobile</li>
+                                    <li>redesign</li>
+                                </ul>
+                                <div class="white">김홍도 미술관</div>
+                            </div>
+                        </div>
+                        <div class="paper paper_02"></div>
+                    </a>
+                    <a href="sub/sub_03.html" class="box_wrap">
+                        <div class="box">
+                            <div class="ent"></div>
+                            <div class="prj_name">
+                                <span>03</span>
+                                <ul>
+                                    <li>web</li>
+                                    <li>redesign</li>
+                                </ul>
+                                <div class="white">Listerine</div>
+                            </div>
+                        </div>
+                        <div class="paper paper_03"></div>
+                    </a>
+                    <a href="sub/sub_04.html" class="box_wrap">
+                        <div class="box">
+                            <div class="ent"></div>
+                            <div class="prj_name">
+                                <span>04</span>
+                                <ul>
+                                    <li>web</li>
+                                    <li>redesign</li>
+                                </ul>
+                                <div class="white">Kwangdong</div>
+                            </div>
+                        </div>
+                        <div class="paper paper_04"></div>
+                    </a>
+                </div>
+                <!-- 워크 순서대로 애니메이션 -->
+                <script>
+                    window.addEventListener('DOMContentLoaded', function () {
+                        const worksSection = document.querySelector('.works');
+                        const boxes = document.querySelectorAll('.works .content .box_wrap');
 
-                if (window.scrollY > triggerPoint) {
-                    box.style.display = 'block'; // 나타나게 함
-                } else {
-                    box.style.display = 'none'; // 다시 숨김
-                }
-            });
-        </script>
+                        const observer = new IntersectionObserver((entries) => {
+                            entries.forEach(entry => {
+                                if (entry.isIntersecting) {
+                                    boxes.forEach((box, i) => {
+                                        setTimeout(() => {
+                                            box.style.opacity = '1';
+                                            box.style.transform = 'translateY(0)';
+                                        }, 400 * i);
+                                    });
+                                    observer.disconnect(); // 한 번만 실행
+                                }
+                            });
+                        }, { threshold: 0.6 }); // 20% 보이면 실행
+
+                        observer.observe(worksSection);
+                    });
+                </script>
+            </section>
+            <!-- CONTACT -->
+            <section class="contact">
+                <h2 class="blind">contact</h2>
+                <div class="ct_wrap">
+                    <div class="tit">
+                        Contact
+                    </div>
+                    <div class="info">
+                        <ul>
+                            <li>010.5098.3514</li>
+                            <li>sujin810@gmail.com</li>
+                            <li><button type="button" popovertarget="popup" popovertargetaction="toggle">click</button></li>
+                        </ul>
+                    </div>
+                    <div id="popup" popover>
+                        <a href="http://qr.kakao.com/talk/BFbKcPZuEZU9ocu4NpzUOO7VyG4-"><img src="images/kakao_link.png" alt="http://qr.kakao.com/talk/BFbKcPZuEZU9ocu4NpzUOO7VyG4-"></a>
+                        <div>
+                            <p>Kakao talk</p>
+                            <p>Scan the QR code !</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
         <!-- 푸터 -->
         <footer>
-            <div class="sns">
-                <a href="http://youtube.com/@Listerinekorea/videos" target='_blank'><img src="images/ico_ytube.png" alt="유튜브 바로가기"></a>
-                <a href="https://www.instagram.com/listerine.kr/" target='_blank'><img src="images/ico_insta.png" alt="인스타그램 바로가기"></a>
-            </div>
-            <div class="site">
-                <div class="company">
-                    <div class="tit">Company</div>
-                    <ul>
-                        <li><a href="javascript:void()">Contact us</a></li>
-                        <li><a href="javascript:void()">공지사항</a></li>
-                    </ul>
-                </div>
-                <div class="Legal">
-                    <div class="tit">Legal</div>
-                    <ul>
-                        <li><a href="javascript:void()">법적 고지</a></li>
-                        <li><a href="javascript:void()">개인정보처리방침</a></li>
-                        <li><a href="javascript:void()">사이트맵</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>한국존슨앤드존슨판매(유) | 서울특별시 용산구 한강대로 92 LS용산타워 27층 | 대표이사 : 백준혁 | 대표전화 : 080-377-0900 (수신자부담)</p>
-                <p>Copyright&copy; 2025 Kenvue Inc. All rights reserved.</p>
-                <p>이 사이트는 대한민국 사용자만을 위해 한국존슨앤드존슨판매(유)에서 제작하였으며 내용상 모든 책임은 한국존슨앤드존슨판매(유)에 있습니다.</p>
+            <img src="images/bot_smile_ico.png" alt="smile_ico">
+            <div class="letter_wrap">
+                <img class="tape_01" src="images/bot_img_01.png" alt="">
+                <img class="tape_02" src="images/bot_img_02.png" alt="">
+                <p>I’m always ready<br>to take the next step.</p>
             </div>
         </footer>
-    </section>
-    <!-- 패럴랙스 -->
+    </div>
+
+    <!-- 스크롤효과 -->
+    <script src="js/skrollr.min.js"></script>
+    <script src="js/skrollr.menu.min.js"></script>
     <script>
-        var ovf, slider;
-        $(function () {
-            ovf = this.getElementById("overflow");
-            slider = this.getElementById("slider");
-            winResize();
-            $(window).bind({ resize: winResize, scroll: winScroll });
-        });
-
-        function winResize() {
-            ovf.style.top = slider.offsetHeight + "px";
-        }
-
-        function winScroll() {
-            var op = 1 - (window.pageYOffset / slider.offsetHeight);
-            slider.style.opacity = op;
-        }
-    </script>
-    <!-- 스크롤시 문자 나타남 -->
-    <script>
-        window.addEventListener('scroll', function () {
-            // 모든 타겟 요소를 배열로 선택
-            const targets = [
-                document.querySelector('.Products .tit'),
-                ...document.querySelectorAll('.reason .cont .num > div p '),
-                ...document.querySelectorAll('.Products .slider li'),
-                ...document.querySelectorAll('.reason .tit'),
-            ];
-
-            targets.forEach(tit => {
-                if (!tit) return; // 요소가 없으면 건너뜀
-                const rect = tit.getBoundingClientRect();
-                if (rect.top < window.innerHeight && rect.bottom > 0) {
-                    tit.classList.add('active');
-                } else {
-                    tit.classList.remove('active');
-                }
-            });
-        });
-    </script>
-    <!-- 구강케어, 제품 텍스트 효과 -->
-    <script>
-        function animateTextBySpan(id, textContent = null) {
-            const container = document.getElementById(id);
-            if (!container) return;
-
-            const rect = container.getBoundingClientRect();
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
-                if (!container.classList.contains('animated')) {
-                    const text = textContent || container.textContent;
-                    container.textContent = "";
-                    text.split("").forEach((char, index) => {
-                        const span = document.createElement("span");
-                        span.textContent = char;
-                        if (char === " ") {
-                            span.classList.add("char", "space");
-                        } else {
-                            span.classList.add("char");
-                            span.style.animationDelay = `${index * 0.1}s`;
-                        }
-                        container.appendChild(span);
-                    });
-                    container.classList.add('animated');
+        var s = skrollr.init({
+            edgeStrategy: 'set',
+            easing: {
+                WTF: Math.random,
+                inverted: function (p) {
+                    return 1 - p;
                 }
             }
-        }
+        });
 
-        window.addEventListener('scroll', function () {
-            animateTextBySpan('text'); // Oral Care
-            animateTextBySpan('products-tit'); // Products
+        var s = skrollr.init();
+        skrollr.menu.init(s, {
+            // Optional configuration options
+            animate: true, // Defaults to true, enables smooth animation
+            duration: function (currentTop, targetTop) {
+                // Custom duration calculation, e.g., based on distance
+                return Math.abs(currentTop - targetTop) * .2;
+            },
+            change: function (newHash, newTopPosition) {
+                // Callback function triggered before animation starts
+            },
+            updateUrl: true // Defaults to true, updates the URL hash
         });
     </script>
 </body>
