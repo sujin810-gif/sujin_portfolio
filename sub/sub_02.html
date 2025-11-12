@@ -1,223 +1,218 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KIMHONGDO</title>
+    <title>리스테린®액 토탈케어 마일드 | Listerine</title>
     <link rel="stylesheet" href="../css/layout.css">
+    <link href="css/fixed-positioning.css" rel="stylesheet" type="text/css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.4.5/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 </head>
-
 <body>
-    <a href="#khd_main" class="blind">본문 바로가기</a>
-    <div class="khd_wrap">
-        <!-- 탑버튼 -->
-        <button id="top_btn">top</button>
-        <script>
-            $(document).ready(function () {
-
-                // Top 버튼 특정 스크롤높이에서만 보이기 / 숨기기
-                $(window).scroll(function () {
-                    if ($(this).scrollTop() > 100) {
-                        $('#top_btn').fadeIn();
-                    } else {
-                        $('#top_btn').fadeOut();
-                    }
-                });
-
-                // Top 버튼 클릭시 페이지 상단으로 이동
-                $('#top_btn').click(function () {
-                    $('html, body').animate({ scrollTop: 0 }, 800);
-                    return false;
-                });
-
-            });
-        </script>
-        <!-- 네비바 -->
-        <div class="khd_sub_nav">
-            <ul>
-                <li><a href="../index.html"><img src="../images/sub_1/left_arrow.png" alt="홈으로 가기">back home</a></li>
-                <li><a href="sub_03.html">next project<img src="../images/sub_1/right_arrow.png" alt="다음 프로젝트 보기"></a></li>
-            </ul>
-        </div>
-        <!-- 메인화면 -->
-        <section class="khd_main">
-            <h2 class="blind">김홍도 미술관 메인</h2>
-            <div class="main_img">
-                <img src="../images/sub_2/main_img_01.png" alt="리플래시화면">
-            </div>
-            <div class="tit">
-                <p>Kim Hong-Do</p>
-                <p>Art Museum</p>
-            </div>
-            <div class="swiper-container">
-                <ul class="swiper-wrapper">
-                    <li class="swiper-slide item01">
-                        <img src="../images/sub_2/main_img_02.png" alt="첫번째 김홍도 작품">
+    <!-- Navigation -->
+    <header>
+        <h1><a href="../index.html" aria-label="홈페이지로 돌아가기"><img src="../images/logo.svg" alt=""></a></h1>
+        <nav>
+            <div class="menu">
+                <ul>
+                    <li><a href="javascript:void()"><p>Brand</p></a></li>
+                    <li><a href="sub_01.html"><p>Products</p></a></li>
+                    <li>
+                        <a href="javascript:void()"><p>Oral Care</p></a>
+                        <ul class="submenu">
+                            <li><a href="javascript:void()"><p>구취</p></a></li>
+                            <li><a href="javascript:void()"><p>잇몸질환</p></a></li>
+                            <li><a href="javascript:void()"><p>플라그</p></a></li>
+                            <li><a href="javascript:void()"><p>치아 미백</p></a></li>
+                        </ul>
                     </li>
-                    <li class="swiper-slide item02">
-                        <img src="../images/sub_2/main_img_03.png" alt="두번째 김홍도 작품">
-                    </li>
-                    <li class="swiper-slide item03">
-                        <img src="../images/sub_2/main_img_04.png" alt="세번째 김홍도 작품">
-                    </li>
-                    <li class="swiper-slide item04">
-                        <img src="../images/sub_2/main_img_05.png" alt="네번째 김홍도 작품">
+                    <li>
+                        <a href="javascript:void()"><p>Why LISTERINE?</p></a>
+                        <ul class="submenu">
+                            <li><a href="javascript:void()"><p>구강청결제의 필요성</p></a></li>
+                            <li><a href="javascript:void()"><p>어린이 안전캡</p></a></li>
+                            <li><a href="javascript:void()"><p>친환경적 발걸음</p></a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>
-            <!-- 메인 이미지 무한 슬라이드 -->
-            <script>
-                let rollingSwiper; // Swiper 슬라이드
+            <div class="buy"><a href="javascript:void()"><img src="../images/ico_buy.png" alt="구매하러 가기">BUY</a></div>
+        </nav>
+        <div class="hbg_wrap">
+            <input type="checkbox" id="icon">
+            <label for="icon">  <!--label은 인라인 스타일-->
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+            <div id="header">
+                <ul>
+                    <li><a href="javascript:void()">Brand</a></li>
+                    <li><a href="sub_01.html">Products</a></li>
+                    <li>
+                        <a href="javascript:void()">Oral Care</a>
+                        <ul class="hbg_submenu">
+                            <li><a href="javascript:void()">구취</a></li>
+                            <li><a href="javascript:void()">잇몸질환</a></li>
+                            <li><a href="javascript:void()">플라그</a></li>
+                            <li><a href="javascript:void()">치아 미백</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void()">Why LISTERINE?</a>
+                        <ul class="hbg_submenu">
+                            <li><a href="javascript:void()">구강청결제의 필요성</a></li>
+                            <li><a href="javascript:void()">어린이 안전캡</a></li>
+                            <li><a href="javascript:void()">친환경적 발걸음</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="buy"><a href="javascript:void()">BUY</a></div>
+            </div>
+        </div>
+    </header>
+    <script>
+        document.querySelectorAll('#header > ul > li > a').forEach(a => {
+            a.addEventListener('click', e => {
+                const submenu = a.nextElementSibling;
+                if (submenu && submenu.classList.contains('hbg_submenu')) {
+                    e.preventDefault(); // 링크 이동 방지
 
-                // 롤링시작 함수
-                function PlayRollingSwiper(target) {
-                    rollingSwiper = new Swiper('.swiper-container', {
-                        spaceBetween: 0,
-                        centeredSlides: true,
-                        speed: 6000,
-                        autoplay: {
-                            delay: 1,
-                        },
-                        loop: true,
-                        slidesPerView: 'auto',
-                        allowTouchMove: false,
-                        disableOnInteraction: false,
-                    });
+                    // 이미 열려 있는 경우 닫기
+                    if (submenu.classList.contains('open')) {
+                        submenu.style.maxHeight = submenu.scrollHeight + 'px'; // 현재 높이 고정
+                        submenu.offsetHeight; // 강제 리플로우 (트랜지션 자연스럽게 작동하게)
+                        submenu.style.maxHeight = '0'; // 닫기 애니메이션
+                        submenu.classList.remove('open');
+                    } else {
+                        submenu.classList.add('open');
+                        submenu.style.maxHeight = submenu.scrollHeight + 'px'; // 내용 높이만큼 열기
+                    }
                 }
-
-                // 페이지 로드
-                window.addEventListener('load', function () {
-                    PlayRollingSwiper();
-                });
-            </script>
-            <!-- 팝오버 -->
-            <div class="popover">
-                <button class="btn-open" popovertarget="popup2" popovertargetaction="toggle" style="cursor: pointer;"><img src="../images/sub_2/info_ico.png" alt="프로젝트 정보"></button>
-                <a href="https://www.figma.com/proto/d2IWvIQ68HIMZrj4Eaynxh/%EB%AA%A8%EB%B0%94%EC%9D%BC-%ED%94%84%EC%A0%9D1?page-id=316%3A282&node-id=316-1528&viewport=250%2C-333%2C0.27&t=B2letOXsSyDnb9Ya-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=316%3A1528" target="_blank" title="새창열림">프로토타입보기<img src="../images/sub_2/proto_arrow.png" alt="프로토타입 보러가기"></a>
-                <div id="popup2" popover>
-                    <ul>
-                        <li><img src="../images/sub_1/popover_01.png" alt="프로젝트 걸린 시간">
-                            <p>3 days</p>
+            });
+        });
+    </script>
+    <!-- 제품 설명 메인 비주얼 -->
+    <div class="sub_02">
+        <section class="vs">
+            <h2 class="blind">제품 상세 이미지</h2>
+            <div class="prd_vs_wrap">
+                <div class="prd_vs"></div>
+                <div class="letter">
+                    <div><span>순한맛</span><span>기본향</span></div>
+                    <div class="tit">리스테린®액 토탈케어 마일드</div>
+                    <ul class="accordion">
+                        <li>
+                            <a href="javascript:void()">6 in 1 토탈케어<div class="img"><img src="../images/arrow_moreview.png" alt="6 in 1 토탈케어 자세히 보기"></div></a>
+                            <div class="acc_cont">
+                                <p>1. 충치예방<br>2. 구강 내 유해균 억제<br>3. 프라그 예방 및 감소<br>4. 잇몸염(치은염) 예방 및 감소<br>5. 치석생성예방 및 감소<br>6. 구취제거
+                                </p>
+                            </div>
                         </li>
-                        <li><img src="../images/sub_1/popover_02.png" alt="프로젝트 사용한 도구">
-                            <p>Figma</p>
-                        </li>
-                        <li><img src="../images/sub_1/popover_03.png" alt="프로젝트 기여도">
-                            <p>기여도 100%</p>
+                        <li>
+                            <a href="javascript:void()">성분표 보기<div class="img"><img src="../images/arrow_moreview.png" alt="리스테린®액 토탈케어 마일드 성분표 보기"></div></a>
+                            <div class="acc_cont">
+                                <img src="../images/labeling.svg" alt="리스테린®액 토탈케어 마일드 성분표">
+                            </div>
                         </li>
                     </ul>
+                    <div><a href="javascript:void()">WHERE TO BUY<img src="/images/where_ico.png" alt=""></a></div>
                 </div>
             </div>
         </section>
-        <!-- 오버뷰&디자인가이드 -->
-        <section class="khd_sub_cont">
-            <h2 class="blind">디자인가이드</h2>
-            <div class="tit">
-                <p>Overview</p>
-                <p>Design Guide</p>
+        <!-- 아코디언 -->
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const items = document.querySelectorAll(".accordion li");
+
+                items.forEach((item) => {
+                    const header = item.querySelector("a");
+                    const content = item.querySelector(".acc_cont");
+
+                    header.addEventListener("click", () => {
+                        const isActive = item.classList.contains("active");
+
+                        // 다른 아이템 닫기
+                        items.forEach(i => {
+                            i.classList.remove("active");
+                            const c = i.querySelector(".acc_cont");
+                            c.style.maxHeight = null;
+                        });
+
+                        if (!isActive) {
+                            item.classList.add("active");
+                            content.style.maxHeight = content.scrollHeight + "px";
+                        }
+                    });
+                });
+            });
+        </script>
+        <section class="sub_02_cont">
+            <h2 class="blind">제품 설명</h2>
+            <div class="dt_wrap">
+                <p>리스테린®액 토탈케어 마일드 </p>
+                <p>리스테린 토탈케어 마일드는 6가지 베네핏을 제공하여 더욱 뛰어난 구강 건강 개선 효과를 경험할 수 있습니다.<br>순한맛으로 처음 사용하는 분들도 편안하게 사용할 수 있습니다.</p>
             </div>
-            <div class="wh_bg">
-                <div class="muk">
-                    <img src="../images/sub_2/muk_01.png" alt="">
-                    <img src="../images/sub_2/muk_03.png" alt="">
-                </div>
-                <div class="overview">
-                    <p>조선 시대를 대표하는 화가 김홍도를 기념하는 미술관이 있다는 사실, 알고 계셨나요? 이와 관련된 앱도<br>존재하지만, 대중적인 인지도가 낮아 많은 사람들이 잘 알지 못해요. 그뿐만 아니라 앱을 직접 사용해보<br>니 전통적인 이미지에 치중되어 있어, 사용자 친화성이 부족하다는 인상을 받았어요.</p>
-                    <p>그래서 조금 더 친화적이고 직관적인 방식으로 즐길 수 있는 앱으로 개선해야겠다고 결심했어요.</p>
-                    <img src="../images/sub_2/overview_hong.png" alt="">
-                </div>
-                <div class="design_guide">
-                    <div class="color_wrap">
-                        <div class="color">
-                            <div class="sub_tit">Color</div>
-                            <div class="cont">하얀 바탕 위에 먹으로 표현한 짙은 검은색<br>을 주색상으로 사용하고, 자연 친화적인 보<br>조 색상을 더해 전통적인 미감과 현대적인<br>감각을 조화롭게 담아냈어요.</div>
-                        </div>
-                        <div class="color_box">
-                            <ul>
-                                <li>
-                                    <div>
-                                        <p>RGB</p>
-                                        <p>255<br>255<br>255</p>
-                                    </div>
-                                    <span>&#35;FFFFFF</span>
-                                </li>
-                                <li>
-                                    <div>
-                                        <p>RGB</p>
-                                        <p>23<br>23<br>23</p>
-                                    </div>
-                                    <span>&#35;171717</span>
-                                </li>
-                                <li>
-                                    <div>
-                                        <p>RGB</p>
-                                        <p>75<br>120<br>92</p>
-                                    </div>
-                                    <span>&#35;4B785C</span>
-                                </li>
-                                <li>
-                                    <div>
-                                        <p>RGB</p>
-                                        <p>104<br>71<br>51</p>
-                                    </div>
-                                    <span>&#35;684733</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="Typo_wrap">
-                        <div class="sub_tit">Typography</div>
-                        <div class="card_wrap">
-                            <div class="frst">
-                                <p>제목&#47;본문</p>
-                                <p>Pretendard</p>
-                                <p>Pretendard 22px</p>
-                                <p>Pretendard 16px</p>
+            <div>
+                <div class="use">
+                    <span class="border">사용방법</span>
+                    <div>
+                        <div>
+                            <span>용법&#183;용량</span>
+                            <div class="DD">
+                                <p>1일 2회(아침, 저녁) 사용.<br>1회 사용 시 20밀리리터로 약 30초간 충분히 입안을 헹군 후 뱉어 내십시오.</p>
+                                <p>사용 후, 입안을 물로 헹구실 필요가 없습니다.</p>
                             </div>
-                            <div class="scnd">
-                                <p>포인트</p>
-                                <p>Moneygraphy</p>
-                                <p>Moneygraphy 22px</p>
-                            </div>
+                        </div>
+                        <div>
+                            <span>저장방법</span>
+                            <div class="DD"><p>기밀 용기, 실온 (1-30'C) 보관</p></div>
+                        </div>
+                        <div>
+                            <span>Tip</span>
+                            <div class="DD"><p>처음 사용하시는 분은 사용 시간과 용량을 줄여서 사용하시고, 점차 시간과 양을 사용법에 맞게 증가시키면 제품에 적응하시는 데 도움이 됩니다</p></div>
                         </div>
                     </div>
                 </div>
+                <div class="danger">
+                    <span class="border">주의사항</span>
+                    <div><p>1. 12세 이하의 어린이에게는 사용하지 말 것.<br>2. 정해진 용법용량을 잘 지킬 것.<br>3. 어린이의 손이 닿지 않는 곳에 보관할 것.<br>4. 본 제품에는 불소가 함유되어 있으므로 마시지 말 것, 잘못 들이마셨을 경우에는 의사 또는 약사와 상의할 것.<br>5. 본 제품에는 벤조산 및 벤조산나트륨이 들어 있으며, 벤조산은 피부, 눈, 점막에 경미한 자극이 될 수 있다.<br>6. 본 제품의 구성성분에 과민증이 있는 환자는 사용하지 말 것.<br>7. 이 제품은 프로필렌글리콜을 함유하고 있으므로 이성분에 과민하거나 알레르기 병력이 있는 사람은 신중히 사용할 것.<br>8. 제품 사용 중에 이상반응 등이 나타날 경우 의사와 상의할 것.<br><span>* 사용자의 구강 상태 또는 제품의 특성상 구강 내에 하얀 이물질이 발생할 수 있으나, 이는 인체에 유해하지 않습니다.</span></p></div>
+                </div>
+                <div class="last">
+                    제품에 대한 의견, 질문, 피드백 또는 제품의 부작용을 보고하려면 <a href="https://www.listerine.kr/contact-us" target="_blank">https://www.listerine.kr/contact-us</a>를 방문해주세요.<br>검증된 연구 결과는 대표균을 사용한 In-Vitro Test 결과를 포함할 수 있습니다.
+                </div>
             </div>
-        </section>
-        <section class="khd_mobile">
-            <h2 class="blind">디자인컨셉</h2>
-            <img class="khd_mobile_img" src="../images/sub_2/mobile.png" alt="김홍도 미술관 메인페이지 시안">
-            <div><p>미술관의 운영시간을 제일 상단에 배치해<br>쉽게 정보를 찾을 수 있게 했어요.</p><img src="../images/sub_2/cc_arrow_01.png" alt="" style="width: 74px; height: 16px;"></div>
-            <div><img src="../images/sub_2/cc_arrow_02.png" alt="" style="width: 60px; height: 16px;"><p>김홍도 화가에 대한 정보를 메인에 배치함으로써,<br>인물에 대한 정보를 더 담아내고 관심을 유도했어요.</p></div>
-            <div><p>직접 방문한 사용자를 위한 메뉴를 한데 모아<br>손쉽게 이용이 가능하도록 만들었어요.</p><img src="../images/sub_2/cc_arrow_03.png" alt="" style="width: 111px; height: 16px;"></div>
-            <div><p>‘오늘의 추천 작품’을 통해 소장품 메뉴에 대<br>한 접근성을 높이고, 사용자가 작품에 더욱<br>관심을 가질 수 있도록 했어요.</p><img src="../images/sub_2/cc_arrow_04.png" alt="" style="width: 151px; height: 16px;"></div>
-        </section>
-        <section class="khd_last">
-            <h2 class="blind">UIUX</h2>
-            <ul>
-                <li><img src="../images/sub_2/bot_img_01.png" alt="김홍도미술관 전시페이지 시안"></li>
-                <li><img src="../images/sub_2/bot_img_02.png" alt="김홍도미술관 메뉴 시안"></li>
-                <li><img src="../images/sub_2/bot_img_03.png" alt="김홍도미술관 전시페이지상세 시안"></li>
-                <li><img src="../images/sub_2/bot_img_04.png" alt="김홍도미술관 전시페이지상세 두번째 시안"></li>
-                <li><img src="../images/sub_2/bot_img_05.png" alt="김홍도미술관 작품페이지 시안"></li>
-                <li><img src="../images/sub_2/bot_img_06.png" alt="김홍도미술관 작품설명 시안"></li>
-                <li><img src="../images/sub_2/bot_img_07.png" alt="김홍도미술관 작품도슨트 시안"></li>
-                <li><img src="../images/sub_2/bot_img_08.png" alt="김홍도미술관 작품자세히보기 시안"></li>
-                <li><img src="../images/sub_2/bot_img_01.png" alt="김홍도미술관 전시페이지 시안"></li>
-                <li><img src="../images/sub_2/bot_img_02.png" alt="김홍도미술관 메뉴 시안"></li>
-                <li><img src="../images/sub_2/bot_img_03.png" alt="김홍도미술관 전시페이지상세 시안"></li>
-                <li><img src="../images/sub_2/bot_img_04.png" alt="김홍도미술관 전시페이지상세 두번째 시안"></li>
-                <li><img src="../images/sub_2/bot_img_05.png" alt="김홍도미술관 작품페이지 시안"></li>
-                <li><img src="../images/sub_2/bot_img_06.png" alt="김홍도미술관 작품설명 시안"></li>
-                <li><img src="../images/sub_2/bot_img_07.png" alt="김홍도미술관 작품도슨트 시안"></li>
-                <li><img src="../images/sub_2/bot_img_08.png" alt="김홍도미술관 작품자세히보기 시안"></li>
-            </ul>
         </section>
     </div>
+    <!-- 푸터 -->
+    <footer class="sub_footer">
+        <div class="sns">
+            <a href="http://youtube.com/@Listerinekorea/videos" target='_blank'><img src="../images/ico_ytube.png" alt="유튜브 바로가기"></a>
+            <a href="https://www.instagram.com/listerine.kr/" target='_blank'><img src="../images/ico_insta.png" alt="인스타그램 바로가기"></a>
+        </div>
+        <div class="site">
+            <div class="company">
+                <div class="tit">Company</div>
+                <ul>
+                    <li><a href="javascript:void()">Contact us</a></li>
+                    <li><a href="javascript:void()">공지사항</a></li>
+                </ul>
+            </div>
+            <div class="Legal">
+                <div class="tit">Legal</div>
+                <ul>
+                    <li><a href="javascript:void()">법적 고지</a></li>
+                    <li><a href="javascript:void()">개인정보처리방침</a></li>
+                    <li><a href="javascript:void()">사이트맵</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>한국존슨앤드존슨판매(유) | 서울특별시 용산구 한강대로 92 LS용산타워 27층 | 대표이사 : 백준혁 | 대표전화 : 080-377-0900 (수신자부담)</p>
+            <p>Copyright&copy; 2025 Kenvue Inc. All rights reserved.</p>
+            <p>이 사이트는 대한민국 사용자만을 위해 한국존슨앤드존슨판매(유)에서 제작하였으며 내용상 모든 책임은 한국존슨앤드존슨판매(유)에 있습니다.</p>
+        </div>
+    </footer>
 </body>
-
 </html>
