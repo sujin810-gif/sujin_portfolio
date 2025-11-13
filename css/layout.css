@@ -580,7 +580,7 @@ footer .letter_wrap p {font-size: 3.8rem; font-family: 'Taenada'; color: #FFA3BC
 
 /* 서브3_메인 컨텐츠 */
 .lt_main .overview .cont_wrap {display: flex;}
-.lt_main .overview .cont_wrap .photo {width: 686px; height: 613px; background: url(../images/sub_3/main_img.jpg) no-repeat left top; background-size: 140%; background-position-y: -60px;}
+.lt_main .overview .cont_wrap .photo {width: 684px; height: 613px; background: url(../images/sub_3/main_img.jpg) no-repeat left top; background-size: 140%; background-position-y: -60px; border-right: 2px solid #686868;}
 .lt_main .overview .cont_wrap > div:last-child {margin-left: 60px;}
 
 /* 서브3_오버뷰 */
